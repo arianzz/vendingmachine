@@ -23,7 +23,7 @@ gpio.on('change', function(channel, value) {
     console.log('Channel ' + channel + ' value is now ' + value);
 });
 
-gpio.setup(18, gpio.DIR_IN, gpio.EDGE_BOTH);
+gpio.setup(16, gpio.DIR_IN, gpio.EDGE_BOTH);
 // gpio.setup(18, gpio.DIR_IN, readInput);
 
 // function readInput() {
