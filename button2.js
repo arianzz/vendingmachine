@@ -9,10 +9,13 @@ function light(err, state) {
   // 1 == pressed, 0 == not pressed
   if(state == 1) {
     // turn LED on
+    // console.log('im working');
+    photoTrigger()
     led.writeSync(1);
   } else {
     // turn LED off
     led.writeSync(0);
+    console.log('im not working');
   }
 
 }
@@ -20,3 +23,8 @@ function light(err, state) {
 // pass the callback function to the
 // as the first argument to watch()
 button.watch(light);
+
+function photoTrigger(){
+
+  console.log('im triggering a photo');
+}
