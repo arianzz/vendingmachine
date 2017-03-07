@@ -19,11 +19,15 @@ res.end('Hello World\n');
 console.log('Server running on port 8080.');
 
 //Read more at https://www.pluralsight.com/guides/node-js/hello-world-node-js?status=i$
+gpio.on('change', function(channel, value) {
+    console.log('Channel ' + channel + ' value is now ' + value);
+});
 
-gpio.setup(18, gpio.DIR_IN, readInput);
+gpio.setup(18, gpio.DIR_IN, gpio.EDGE_BOTH);
+// gpio.setup(18, gpio.DIR_IN, readInput);
 
-function readInput() {
-    gpio.read(18, function(err, value) {
-        console.log('The value is ' + value);
-    });
-}
+// function readInput() {
+//     gpio.read(18, function(err, value) {
+//         console.log('The value is ' + value);
+//     });
+// }
