@@ -48,7 +48,7 @@ function light(err, state) {
 
 // pass the callback function to the
 // as the first argument to watch()
-button.watch(light);
+//button.watch(light);
 
 images.innerHTML = photos[0];
 
