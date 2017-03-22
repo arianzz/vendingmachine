@@ -41,7 +41,9 @@ function light(err, state) {
         led.writeSync(1);
     } else {
         // turn LED off
-        show(photos[0]);
+        var randNum = Math.floor(Math.random()*photos.length)
+        console.log("random number: ",randNum);
+        show(photos[randNum]);
         led.writeSync(0);
         console.log('im not working');
     }
@@ -51,7 +53,7 @@ function light(err, state) {
 // as the first argument to watch()
 button.watch(light);
 
-images.innerHTML = photos[0];
+//images.innerHTML = photos[randNum];
 
 function photoTrigger() {
     images.innerHTML = photos[myIndex];
