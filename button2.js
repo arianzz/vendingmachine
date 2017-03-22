@@ -1,3 +1,4 @@
+var http = require('http')
 var GPIO = require('onoff').Gpio,
     led = new GPIO(18, 'out'),
     button = new GPIO(16, 'in', 'both');
