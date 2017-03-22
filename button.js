@@ -14,9 +14,7 @@ wpi.wiringPiISR(configPin, wpi.INT_EDGE_BOTH, function() {
     if (false === started) {
       started = true;
       clock = setTimeout(handleButton, 3000);
-    }
-  }
-  else {
+    }else {
     started = false;
     clearTimeout(clock);
   }
