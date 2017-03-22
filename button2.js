@@ -16,7 +16,7 @@ http.createServer(function(req, res) {
 console.log('Server running on port 8080.');
 var photos = ["vendingmachine/1.png", "vendingmachine/2.png", "vendingmachine/3.png", "vendingmachine/4.png", "vendingmachine/5.png", "vendingmachine/6.png", "vendingmachine/7.png", "vendingmachine/8.png", "vendingmachine/9.png", "vendingmachine/10.png", "vendingmachine/11.png", "vendingmachine/12.png", "vendingmachine/13.png", "vendingmachine/14.png", "vendingmachine/15.png", "vendingmachine/16.png", "vendingmachine/17.png", "vendingmachine/18.png", "vendingmachine/19.png", "vendingmachine/20.png", "vendingmachine/21.png", "vendingmachine/22.png", "vendingmachine/23.png", "vendingmachine/24.png", "vendingmachine/25.png", "vendingmachine/26.png"];
 myIndex = 1;
-var images = document.getElementById('#images');
+var images = document.getElementById('images');
 // define the callback function
 function light(err, state) {
 
