@@ -44,4 +44,4 @@ function photoTrigger() {
     myIndex = (myIndex + 1) % (photos.length);
 }
 console.log('im triggering a photo');
-}
+//}
