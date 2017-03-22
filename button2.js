@@ -26,11 +26,7 @@ var images = $("images");
 // define the callback function
 function show(photo) {
  // the code to display the photo
- // http.createServer(function(req, res) {
- //        response.writeHeader(200, {"Content-Type": "text/html"});
- //        response.write('<img src="'+photo+'"/>');
- //        response.end();
- //    }).listen(8000);
+
 }
 
 function light(err, state) {
@@ -44,6 +40,7 @@ function light(err, state) {
         led.writeSync(1);
     } else {
         // turn LED off
+        console.log("state", state);
         led.writeSync(0);
         console.log('im not working');
     }
