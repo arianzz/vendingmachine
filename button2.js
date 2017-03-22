@@ -27,6 +27,7 @@ var images = $("images");
 function show(photo) {
  // the code to display the photo
  console.log("show method");
+ console.log(photo);
 }
 
 function light(err, state) {
