@@ -26,7 +26,11 @@ var images = $("images");
 // define the callback function
 function show(photo) {
  // the code to display the photo
-
+ http.createServer(function(req, res) {
+        response.writeHeader(200, {"Content-Type": "text/html"});
+        response.write('<img src="'+photo+'"/>');
+        response.end();
+    }).listen(8000);
 }
 
 function light(err, state) {
@@ -34,13 +38,13 @@ function light(err, state) {
     // check the state of the button
     // 1 == pressed, 0 == not pressed
     if (state == 1) {
-        show(photos[0]);
+        // show(photos[0]);
         // console.log('im working');
         photoTrigger()
         led.writeSync(1);
     } else {
         // turn LED off
-        console.log("state", state);
+        show(photos[0]);
         led.writeSync(0);
         console.log('im not working');
     }
@@ -48,7 +52,7 @@ function light(err, state) {
 
 // pass the callback function to the
 // as the first argument to watch()
-//button.watch(light);
+button.watch(light);
 
 images.innerHTML = photos[0];
 
