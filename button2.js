@@ -26,11 +26,11 @@ var images = $("images");
 // define the callback function
 function show(photo) {
  // the code to display the photo
- http.createServer(function(req, res) {
-        response.writeHeader(200, {"Content-Type": "text/html"});
-        response.write('<img src="'+photo+'"/>');
-        response.end();
-    }).listen(8000);
+ // http.createServer(function(req, res) {
+ //        response.writeHeader(200, {"Content-Type": "text/html"});
+ //        response.write('<img src="'+photo+'"/>');
+ //        response.end();
+ //    }).listen(8000);
 }
 
 function light(err, state) {
