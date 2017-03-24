@@ -54,7 +54,7 @@ function light(err, state) {
     }
 }
 app.get('/', function (req, res) {
-  res.send('index.html')
+  res.send('hi')
 })
 // pass the callback function to the
 // as the first argument to watch()
