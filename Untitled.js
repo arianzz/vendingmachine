@@ -43,6 +43,7 @@ function light(err, state) {
         // console.log('im working');
         photoTrigger()
         led.writeSync(1);
+        console.log('whatever');
         io.emit('fun','vendingmachine/1.png')
     } else {
         // turn LED off
