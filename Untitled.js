@@ -62,7 +62,6 @@ button.watch(light);
 
 //images.innerHTML = photos[randNum];
 
-app.use('/', app)
 function photoTrigger() {
     images.innerHTML = photos[myIndex];
     myIndex = (myIndex + 1) % (photos.length);
