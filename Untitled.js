@@ -54,8 +54,7 @@ function light(err, state) {
     }
 }
 app.get('/', function (req, res) {
-  // res.send('hi')
-  res.render("index.html")
+  res.send('hi')
 })
 // pass the callback function to the
 // as the first argument to watch()
@@ -63,6 +62,7 @@ button.watch(light);
 
 //images.innerHTML = photos[randNum];
 
+app.use('/', app)
 function photoTrigger() {
     images.innerHTML = photos[myIndex];
     myIndex = (myIndex + 1) % (photos.length);
