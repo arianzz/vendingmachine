@@ -8,7 +8,7 @@ var GPIO = require('onoff').Gpio,
 
     });
 
-})
+
 var io = require('socket.io')(server);
 
 io.on('connection', function(client){
