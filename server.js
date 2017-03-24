@@ -8,11 +8,13 @@ then type: scp -r Node_pi_test/ pi@128.122.6.239:/home/pi/Desktop/Node_pi_test
 var gpio = require('rpi-gpio');
 var http = require('http'); // create an http server to handle requests and response
 
+
+
 http.createServer(function (req, res) {
  // sending a response header of 200 OK
-res.writeHead(200, {'Content-Type': 'text/plain'});
+//res.writeHead(200, {'Content-Type': 'text/plain'});
  // print out Hello World
-res.end('Hello World\n');
+//res.end('Hello World\n');
  // use port 8080
 
 }).listen(8080);

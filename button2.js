@@ -1,8 +1,16 @@
+
+
+
 var http = require('http')
 var cheerio = require('cheerio')
 var GPIO = require('onoff').Gpio,
     led = new GPIO(18, 'out'),
     button = new GPIO(16, 'in', 'both');
+
+    });
+
+})
+
 
 http.createServer(function(req, res) {
     // sending a response header of 200 OK
