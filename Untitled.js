@@ -15,6 +15,7 @@ io.on('connection', function(client){
   console.log("frontend has connected")
 
   client.on('art', function(data){
+    console.log('art here');
   });
 
   client.on('disconnect', function(){
@@ -55,7 +56,7 @@ function light(err, state) {
     }
 }
 app.get('/', function (req, res) {
-  res.send('hi')
+  res.send('hello there')
 })
 // pass the callback function to the
 // as the first argument to watch()
