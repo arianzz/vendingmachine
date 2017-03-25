@@ -4,6 +4,7 @@ $(function photos() {
         socket.emit('art', 'vendingmachine/1.png');
         return false;
     });
-    socket.on('art', function(photos);
+    socket.on('art', function(photos) {
+      console.log(photos);
     });
 });

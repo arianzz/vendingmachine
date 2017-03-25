@@ -8,6 +8,7 @@ var GPIO = require('onoff').Gpio,
 
     // });
 
+app.use(express.static('public'));
 
 var io = require('socket.io')(server);
 
@@ -15,10 +16,10 @@ io.on('connection', function(client){
   console.log("frontend has connected")
 
   client.on('art', function(data){
-    console.log('art here');
   });
 
   client.on('disconnect', function(){
+	console.log("frontend has disconnected")
   });
 
 });
@@ -27,7 +28,7 @@ var photos = ["vendingmachine/1.png", "vendingmachine/2.png", "vendingmachine/3.
 myIndex = 1;
 //var images = document.getElementById("images");
 let $ = cheerio.load('<div id="images"></div>')
-var images = $("images");
+var images = $("#images");
 // define the callback function
 function show(photo) {
  // the code to display the photo
@@ -41,11 +42,12 @@ function light(err, state) {
     // 1 == pressed, 0 == not pressed
     if (state == 1) {
         // show(photos[0]);
-        // console.log('im working');
+        console.log('im working');
         photoTrigger()
         led.writeSync(1);
         console.log('whatever');
-        io.emit('fun','vendingmachine/1.png')
+	var randNum = Math.floor(Math.random()*photos.length)
+        io.emit('message','vendingmachine/'+randNum+'.png')
     } else {
         // turn LED off
         var randNum = Math.floor(Math.random()*photos.length)
@@ -56,7 +58,10 @@ function light(err, state) {
     }
 }
 app.get('/', function (req, res) {
-  res.send('hello there')
+	console.log('server');
+	//res.send('<h1>Hellosdfa world</h1><script src = "socket.io/socket.io.js"> </script><script> var socket = io(); </script>');
+	res.sendFile(__dirname + '/index.html');
+  //res.sendFile('public/index.html', {root: __dirname});
 })
 // pass the callback function to the
 // as the first argument to watch()
@@ -68,6 +73,6 @@ function photoTrigger() {
     images.innerHTML = photos[myIndex];
     myIndex = (myIndex + 1) % (photos.length);
 }
-console.log('im triggering a photo');
+//console.log('im triggering a photo');
 //}
 server.listen(8080);

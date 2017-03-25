@@ -2,60 +2,60 @@
 1 verbose cli [ '/usr/local/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'self-register' ]
+1 verbose cli   'server.io' ]
 2 info using npm@3.10.10
 3 info using node@v6.10.0
 4 silly loadCurrentTree Starting
 5 silly install loadCurrentTree
 6 silly install readLocalPackageData
-7 silly fetchPackageMetaData self-register
-8 silly fetchNamedPackageData self-register
-9 silly mapToRegistry name self-register
+7 silly fetchPackageMetaData server.io
+8 silly fetchNamedPackageData server.io
+9 silly mapToRegistry name server.io
 10 silly mapToRegistry using default registry
 11 silly mapToRegistry registry https://registry.npmjs.org/
 12 silly mapToRegistry data Result {
-12 silly mapToRegistry   raw: 'self-register',
+12 silly mapToRegistry   raw: 'server.io',
 12 silly mapToRegistry   scope: null,
-12 silly mapToRegistry   escapedName: 'self-register',
-12 silly mapToRegistry   name: 'self-register',
+12 silly mapToRegistry   escapedName: 'server.io',
+12 silly mapToRegistry   name: 'server.io',
 12 silly mapToRegistry   rawSpec: '',
 12 silly mapToRegistry   spec: 'latest',
 12 silly mapToRegistry   type: 'tag' }
-13 silly mapToRegistry uri https://registry.npmjs.org/self-register
-14 verbose request uri https://registry.npmjs.org/self-register
+13 silly mapToRegistry uri https://registry.npmjs.org/server.io
+14 verbose request uri https://registry.npmjs.org/server.io
 15 verbose request no auth needed
-16 info attempt registry request try #1 at 7:57:56 PM
-17 verbose request id 3d305af6f8b6f9db
-18 http request GET https://registry.npmjs.org/self-register
-19 http 404 https://registry.npmjs.org/self-register
+16 info attempt registry request try #1 at 8:51:31 PM
+17 verbose request id 5472c8d0fbdc3523
+18 http request GET https://registry.npmjs.org/server.io
+19 http 404 https://registry.npmjs.org/server.io
 20 verbose headers { 'content-type': 'application/json',
 20 verbose headers   'cache-control': 'max-age=0',
 20 verbose headers   'content-length': '2',
 20 verbose headers   'accept-ranges': 'bytes',
-20 verbose headers   date: 'Fri, 24 Mar 2017 23:57:56 GMT',
+20 verbose headers   date: 'Sat, 25 Mar 2017 00:51:32 GMT',
 20 verbose headers   via: '1.1 varnish',
 20 verbose headers   age: '0',
 20 verbose headers   connection: 'keep-alive',
-20 verbose headers   'x-served-by': 'cache-jfk8147-JFK',
+20 verbose headers   'x-served-by': 'cache-jfk8149-JFK',
 20 verbose headers   'x-cache': 'MISS',
 20 verbose headers   'x-cache-hits': '0',
-20 verbose headers   'x-timer': 'S1490399876.280877,VS0,VE421',
+20 verbose headers   'x-timer': 'S1490403091.616996,VS0,VE403',
 20 verbose headers   vary: 'Accept-Encoding' }
 21 silly get cb [ 404,
 21 silly get   { 'content-type': 'application/json',
 21 silly get     'cache-control': 'max-age=0',
 21 silly get     'content-length': '2',
 21 silly get     'accept-ranges': 'bytes',
-21 silly get     date: 'Fri, 24 Mar 2017 23:57:56 GMT',
+21 silly get     date: 'Sat, 25 Mar 2017 00:51:32 GMT',
 21 silly get     via: '1.1 varnish',
 21 silly get     age: '0',
 21 silly get     connection: 'keep-alive',
-21 silly get     'x-served-by': 'cache-jfk8147-JFK',
+21 silly get     'x-served-by': 'cache-jfk8149-JFK',
 21 silly get     'x-cache': 'MISS',
 21 silly get     'x-cache-hits': '0',
-21 silly get     'x-timer': 'S1490399876.280877,VS0,VE421',
+21 silly get     'x-timer': 'S1490403091.616996,VS0,VE403',
 21 silly get     vary: 'Accept-Encoding' } ]
-22 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/self-register
+22 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/server.io
 22 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
 22 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
 22 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
@@ -66,7 +66,7 @@
 22 silly fetchPackageMetaData     at emitOne (events.js:96:13)
 22 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
 22 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
-22 silly fetchPackageMetaData  error for self-register { Error: Registry returned 404 for GET on https://registry.npmjs.org/self-register
+22 silly fetchPackageMetaData  error for server.io { Error: Registry returned 404 for GET on https://registry.npmjs.org/server.io
 22 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
 22 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
 22 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
@@ -76,12 +76,12 @@
 22 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
 22 silly fetchPackageMetaData     at emitOne (events.js:96:13)
 22 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
-22 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12) pkgid: 'self-register', statusCode: 404, code: 'E404' }
+22 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12) pkgid: 'server.io', statusCode: 404, code: 'E404' }
 23 silly rollbackFailedOptional Starting
 24 silly rollbackFailedOptional Finishing
 25 silly runTopLevelLifecycles Finishing
 26 silly install printInstalled
-27 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/self-register
+27 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/server.io
 27 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
 27 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
 27 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
@@ -93,16 +93,16 @@
 27 verbose stack     at Request.emit (events.js:188:7)
 27 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
 28 verbose statusCode 404
-29 verbose pkgid self-register
+29 verbose pkgid server.io
 30 verbose cwd /Users/arianavassilopoulou/Desktop/vendingmachine
 31 error Darwin 15.6.0
-32 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "self-register"
+32 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "server.io"
 33 error node v6.10.0
 34 error npm  v3.10.10
 35 error code E404
-36 error 404 Registry returned 404 for GET on https://registry.npmjs.org/self-register
+36 error 404 Registry returned 404 for GET on https://registry.npmjs.org/server.io
 37 error 404
-38 error 404 'self-register' is not in the npm registry.
+38 error 404 'server.io' is not in the npm registry.
 39 error 404 You should bug the author to publish it (or use the name yourself!)
 40 error 404 Note that you can also install from a
 41 error 404 tarball, folder, http url, or git url.
