@@ -75,4 +75,4 @@ function photoTrigger() {
 }
 //console.log('im triggering a photo');
 //}
-server.listen(8080);
+server.listen(1234);
