@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All gooddsfd	d</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src="public/frontendjavascript.js"></script>
+    <style>
+    
+
+  	#currentImage {
+      		//display: hide;
+    	}
+    </style>
+  </head>
+  <body>
+     <div id="images">
+    <img class='fullimg' id='currentImage' src='vendingmachine/1.png'/>
+<!--      <img class='fullimg' id='image0' src='vendingmachine/1.png'>
+          <img class='fullimg' id='image1' src='vendingmachine/2.png'>
+      
+  <img class='fullimg' id='image2' src='vendingmachine/3.png'>
+          <img class='fullimg' id='image3' src='vendingmachine/4.png'>
+          <img class='fullimg' id='image4' src='vendingmachine/5.png'>
+
+-->
+    </div>
+
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"> </script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script> 
+		var socket = io();
+
+		$(function () {
+		    var socket = io();
+		    
+   		 socket.on('message', function(myMsg){
+			console.log(myMsg);
+			$(currentImage).attr("src",myMsg);
+		});
+});
+	</script>
+
+    
+  </body>
+</html>
