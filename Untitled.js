@@ -4,6 +4,7 @@ var server = require('http').Server(app);
 var cheerio = require('cheerio')
 var GPIO = require('onoff').Gpio,
     led = new GPIO(18, 'out'),
+    GPIOpwr = new GPIO(21, 'out'),
     button = new GPIO(16, 'in', 'both');
 
     // });
@@ -37,7 +38,7 @@ function show(photo) {
 }
 
 function light(err, state) {
-
+    GPIOpwr.writeSync(1);
     // check the state of the button
     // 1 == pressed, 0 == not pressed
     if (state == 1) {
