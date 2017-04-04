@@ -10,7 +10,7 @@ var GPIO = require('onoff').Gpio,
     // });
 
 app.use(express.static('public'));
-
+GPIOpwr.writeSync(1);
 var io = require('socket.io')(server);
 
 io.on('connection', function(client){
